@@ -55,13 +55,15 @@ You can disable the comments system by leaving the `disqusShortname` empty.
 
 ### Google Analytics
 
-You can optionally enable Google Analytics. Type your tracking code in the ``.
+You can optionally enable Google Analytics by setting the service ID in your site config.
 
 ```toml
-googleAnalytics = "UA-XXXXX-X"
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXXXXXXX"
 ```
 
-Leave the `googleAnalytics` key empty to disable it.
+Leave `id` empty to disable it.
 
 ### Make the contact form working
 
