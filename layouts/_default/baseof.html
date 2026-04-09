@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>{{ partial "head.html" . }}</head>
+<html lang="{{ or site.Language.LanguageCode site.LanguageCode "en" }}">
+<head>
+  {{ partial "head.html" . }}
+  {{ block "head" . }}{{ end }}
+</head>
 <body>
   <div id="all">
       <div class="container-fluid">

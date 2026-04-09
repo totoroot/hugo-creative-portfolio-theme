@@ -1,7 +1,11 @@
-<head> 
-    {{ range .Site.Params.navlinks }}
+{{ define "head" }}
+  {{ range site.Params.navlinks }}
     {{ if .home }}
-    <meta http-equiv="refresh" content="0; URL={{ .url | absURL }}" />
+      <meta http-equiv="refresh" content="0; URL={{ .url | absURL }}" />
     {{ end }}
-    {{ end }}
-  </head>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  {{ partial "portfolio.html" . }}
+{{ end }}
