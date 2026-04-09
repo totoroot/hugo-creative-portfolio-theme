@@ -2,3 +2,5 @@
 themes/
 public/
 .idea/*
+.hugo_build.lock
+exampleSite/.hugo_build.lock
