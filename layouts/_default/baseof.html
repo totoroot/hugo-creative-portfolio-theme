@@ -10,6 +10,14 @@
     {{ $fontComboClass = "font-combo-neuton-inter" }}
   {{ else if eq . "cormorant-inter" }}
     {{ $fontComboClass = "font-combo-cormorant-inter" }}
+  {{ else if eq . "bodoni-inter" }}
+    {{ $fontComboClass = "font-combo-bodoni-inter" }}
+  {{ else if eq . "playfair-inter" }}
+    {{ $fontComboClass = "font-combo-playfair-inter" }}
+  {{ else if eq . "spectral-inter" }}
+    {{ $fontComboClass = "font-combo-spectral-inter" }}
+  {{ else if eq . "cinzel-inter" }}
+    {{ $fontComboClass = "font-combo-cinzel-inter" }}
   {{ end }}
 {{ end }}
 <body class="{{ $fontComboClass }}">
