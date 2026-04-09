@@ -4,7 +4,15 @@
   {{ partial "head.html" . }}
   {{ block "head" . }}{{ end }}
 </head>
-<body>
+{{ $fontComboClass := "" }}
+{{ with .Site.Params.font.combo }}
+  {{ if eq . "neuton-inter" }}
+    {{ $fontComboClass = "font-combo-neuton-inter" }}
+  {{ else if eq . "cormorant-inter" }}
+    {{ $fontComboClass = "font-combo-cormorant-inter" }}
+  {{ end }}
+{{ end }}
+<body class="{{ $fontComboClass }}">
   <div id="all">
       <div class="container-fluid">
           <div class="row row-offcanvas row-offcanvas-left">
